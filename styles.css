@@ -1,0 +1,62 @@
+body {
+    height: 100%;
+    background-color: whitesmoke;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-rows: 60px 3fr 2fr 40px;
+    grid-template-areas: 
+        "h"
+        "m"
+        "w"
+        "f";
+}
+
+header {
+	grid-area: h;
+	background-color:teal ;
+	text-align: center;
+}
+
+main {
+	grid-area: m;
+	background-color:tomato ;
+}
+
+widgets {
+	grid-area: w;
+	background-color:slateblue ;
+}
+
+footer {
+	grid-area: f;
+	background-color:peru ;
+}
+
+  /* For desktop: */
+@media (min-width: 600px) {
+    body {
+        min-height: 600px;
+        background-color:grey;
+        grid-template-rows: 3fr 2fr 60px;
+        grid-template-columns: 2fr 4fr;
+        grid-template-areas: 
+            "h m"
+            "h w"
+            "h f";
+    }
+
+      /* For wide-screen: */
+@media (min-width: 1024px) {
+    body {
+        min-height: 980px;
+        background-color: rgb(54, 54, 54);
+        font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+        grid-template-rows: 1fr 60px;
+        grid-template-columns: 2fr 4fr 2fr;
+        grid-template-areas: 
+            "h m w"
+            "h f w";
+    }
+
+}
